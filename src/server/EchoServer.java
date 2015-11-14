@@ -26,12 +26,12 @@ public class EchoServer {
                 BufferedReader in = new BufferedReader(
                         new InputStreamReader(clientSocket.getInputStream()));
         ) {
-            String inputLine;
+            String inputLine, response = "";
             CommandHandler commandhandler = new CommandHandler();
 
-            while ((inputLine = in.readLine()) != null) {
+            while ((inputLine = in.readLine()) != null && response != "EXITOK") {
 
-                String response = commandhandler.input(inputLine);
+                response = commandhandler.input(inputLine);
                 out.println(response);
             }
 
