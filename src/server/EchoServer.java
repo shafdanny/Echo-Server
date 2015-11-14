@@ -1,5 +1,7 @@
 package server;
 
+import command.CommandHandler;
+
 import java.io.*;
 import java.net.*;
 
@@ -25,17 +27,16 @@ public class EchoServer {
                         new InputStreamReader(clientSocket.getInputStream()));
         ) {
             String inputLine;
+            CommandHandler commandhandler = new CommandHandler();
+
             while ((inputLine = in.readLine()) != null) {
-                if(inputLine.equals("EXIT")){
 
-                    out.println("EXITOK");
-                    break;
-                }
-
-                out.println(inputLine);
+                String response = commandhandler.input(inputLine);
+                out.println(response);
             }
 
             serverSocket.close();
+
         } catch (IOException e) {
             System.out.println("Exception caught when trying to listen on port "
                     + portNumber + " or listening for a connection");
