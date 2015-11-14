@@ -27,7 +27,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>com.shafiqdaniel.server.EchoServer</mainClass>
+                            <mainClass>server.EchoServer</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
