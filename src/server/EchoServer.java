@@ -25,7 +25,6 @@ public class EchoServer {
                         new InputStreamReader(clientSocket.getInputStream()));
         ) {
             String inputLine;
-            out.println("You have connected to the echo server !");
             while ((inputLine = in.readLine()) != null) {
                 out.println(inputLine);
             }
