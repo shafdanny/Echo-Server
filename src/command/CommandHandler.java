@@ -10,6 +10,7 @@ public class CommandHandler {
         switch (inputLine){
             case "EXIT":response = "EXITOK";return response;
             case "ADD":response = "ADDOK";return response;
+            case "HELP": return ("No help for you");
             default:response = inputLine;
         }
 
