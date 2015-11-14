@@ -9,7 +9,7 @@ public class CommandHandler {
 
         switch (inputLine){
             case "EXIT":response = "EXITOK";return response;
-            case "ADD":response = "ADDOK";return response;
+            case "ADDNOM":response = "ADDNOMOK";return response;
             default:response = inputLine;
         }
 
