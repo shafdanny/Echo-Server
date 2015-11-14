@@ -8,7 +8,7 @@ public class CommandHandler {
         String response = "";
 
         switch (inputLine){
-            case "EXIT":break;
+            case "EXIT":response = "EXITOK";return response;
             default:response = inputLine;
         }
 
