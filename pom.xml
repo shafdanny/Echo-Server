@@ -15,11 +15,17 @@
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.7</source>
+                    <target>1.7</target>
+                </configuration>
+                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>com.shafiqdaniel.EchoServer</mainClass>
+                            <mainClass>com.shafiqdaniel.server.EchoServer</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
