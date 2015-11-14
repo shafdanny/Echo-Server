@@ -9,10 +9,11 @@
     <version>1.0-SNAPSHOT</version>
 
     <build>
+        <sourceDirectory>${basedir}/src</sourceDirectory>
         <defaultGoal>
             install
         </defaultGoal>
-        <sourceDirectory>${basedir}/src</sourceDirectory>
+
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
